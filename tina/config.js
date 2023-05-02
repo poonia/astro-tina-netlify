@@ -53,6 +53,42 @@ export default defineConfig({
           }
         ],
       },
+      {
+        name: 'snippet',
+        label: 'Snippets',
+        path: 'src/content/snippets',
+        format: 'mdx',
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Title',
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Description',
+          },
+          {
+            type: 'image',
+            name: 'image',
+            label: 'Image',
+          },
+          {
+            type: 'string',
+            name: 'source',
+            label: 'Source',
+          },
+          {
+            type: 'rich-text',
+            name: 'body',
+            label: 'Body',
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 });
