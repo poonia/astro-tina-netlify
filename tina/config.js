@@ -23,7 +23,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/content/blog",
         fields: [
           {
             type: "string",
@@ -33,11 +33,24 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",
             isBody: true,
+            isTitle: true,
           },
+          {
+            label: "Date",
+            name: "pubDate",
+            type: "datetime",
+            isTitle: true,
+          }
         ],
       },
     ],
